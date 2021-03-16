@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url("../../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: 'Poppins SemiBold';
+  src: url("../../fonts/Poppins-SemiBold.ttf");
+}
+
+$sub_color: #ba0000;
+$main_color: #fff;
+$paragraph_color: #838383;
+$header_color: #ba0000;
+$btn_color: #ffcc00;
+$dk_btn_color: #a00000;
+$main_font: Poppins Regular, sans-serif;
+$bold_font: Poppins Bold, sans-serif;
+$main_padding: 0 13%;
+
+@mixin btn {
+  border-radius: 25px;
+  box-shadow: 0 10px 18px 0 rgba(255,204,0,0.4);
+  font-family: $main_font;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+@mixin btn_hover{
+  box-shadow: 0 10px 18px 0 rgba(255, 204, 0, 0.9);
+}
+
+@mixin paragraph {
+  font-family: $main_font;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
