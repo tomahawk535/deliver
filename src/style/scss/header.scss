@@ -121,6 +121,71 @@ header {
       }
     }
   }
+  .header_info {
+    width: 100%;
+    padding: 7.625rem 10%;
+    background-image:linear-gradient(45.0deg, #ba0000 20%, rgba(255,204,0,0.0) 79%), url("../../img/assets/layer_3_102.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+      font-family:  $main_font;
+      color:  $main_color;
+      font-size: 4.375rem;
+      line-height: 5rem;
+      letter-spacing: 0.03rem;
+      width: 60%;
+    }
+    hr {
+      width: 100px;
+      height: 4px;
+      background-color:  $btn_color;
+      margin: 2.8125rem 0;
+    }
+    p {
+      font-family:  $main_font;
+      font-size: 1.25em;
+      line-height: 1.875em;
+      letter-spacing: 0.03rem;
+      color: $btn_color;
+      width: 60%;
+      margin-bottom: 25px;
+    }
+    .header_info_list {
+      display: flex;
+      flex-basis: 30%;
+      .header_info_list_item {
+        list-style-type: none;
+        margin-right: 1rem;
+        color:  $main_color;
+        font-family:  $main_font;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+      }
+    }
+    .learn-more {
+      @include btn;
+      background-color: $btn_color;
+      padding: 1rem;
+      margin-right: 1rem;
+      color: $header_color;
+      &:hover {
+        @include btn_hover;
+        cursor: pointer;
+      }
+    }
+    .www{
+      @include btn;
+      box-shadow: none;
+      padding: 1rem;
+      background-color: transparent;
+      border: 2px solid $main_color;
+      color:  $main_color;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 2px 16px rgba(255, 255,255, 0.9);
+      }
+    }
+  }
 }
 
 
@@ -129,7 +194,7 @@ header {
 @media all and (max-width: 599px){
  header {
    .settings{
-     padding: 0 2%;
+     padding: 1.125rem 2%;
    }
    nav {
      .brand_logo {
@@ -153,9 +218,24 @@ header {
       }
     }
     nav {
+      padding: 1.125rem 2%;
       .brand_logo {
         img {
           width: 100%;
+        }
+      }
+    }
+    .header_info {
+      padding: 1.125rem 2%;
+      h1 {
+        font-size: 3.125rem;
+        line-height: 3.74rem;
+      }
+      .header_info_list {
+        margin-bottom: 1rem;
+        .header_info_list_item {
+          font-size: 0.875rem;
+          margin-right: 1rem;
         }
       }
     }
@@ -165,7 +245,13 @@ header {
 @media (min-width: 600px) and (max-width: 770px) {
   header{
    .settings {
-     padding: 0 5%;
+     padding: 1.275rem 5%;
+   }
+   nav {
+     padding: 1.275rem 5%;
+   }
+   .header_info {
+     padding: 5.625rem 10%;
    }
   }
 }
@@ -185,6 +271,15 @@ header {
         width: 60%;
       }
     }
+    .header_info {
+      text-align: center;
+      h1, p {
+        width: 100%;
+      }
+      .header_info_list {
+        justify-content: center;
+      }
+    }
   }
 }
 @media all and (min-width: 1900px) {
@@ -194,6 +289,9 @@ header {
     }
     nav {
       padding: 1.875rem 20%;
+    }
+    .header_info {
+      padding: 7.625rem 20%;
     }
   }
 }

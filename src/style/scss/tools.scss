@@ -28,9 +28,12 @@ $main_padding: 0 13%;
   font-size: 12px;
   letter-spacing: 0.1em;
   font-weight: 400;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
 }
 @mixin btn_hover{
-  box-shadow: 0 10px 18px 0 rgba(255, 204, 0, 0.9);
+  box-shadow: 0 2px 16px rgba(255, 204, 0, 0.9);
 }
 
 @mixin paragraph {
