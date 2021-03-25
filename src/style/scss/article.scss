@@ -90,6 +90,40 @@ article {
       }
     }
   }
+  .video-section {
+    display: flex;
+    justify-content:  center;
+    flex-wrap: wrap;
+    padding-top: 8.4375rem;
+    padding-bottom: 22.875em;
+    background: linear-gradient(0.0deg, rgba(255,204,0, 0.5) 0%, rgba(0,0,0,0.5) 100%),
+    url("../../img/assets/layer_6_168.png");
+    h2 {
+      flex-basis: 100%;
+      text-align: center;
+      color:  $main_color;
+      font-size: 3.125rem;
+      line-height: 5rem;
+      font-weight: bold;
+    }
+    .play-btn{
+      width: 4.375rem;
+      height: 4.375rem;
+      clip-path: circle(50% at 50% 50%);
+      background-color:  $btn_color;
+      box-shadow: 0px 10px 18px 0px rgba(255,204,0,0.4);
+      display: flex;
+      justify-content: center;
+      i {
+        align-self: center;
+        color:  $header_color;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+  }
   .sub-info {
     display: flex;
     flex-wrap: wrap;
