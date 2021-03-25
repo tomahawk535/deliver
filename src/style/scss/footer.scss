@@ -1,0 +1,50 @@
+@import "tools";
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  font-family:  $main_font;
+  .left-side-bg {
+    width: 15%;
+    background: linear-gradient(to right, $header_color 10%, transparent 10%), url("../../img/assets/layer_10_358.png") no-repeat;
+    background-size: cover;
+
+  }
+  .right-side-bg {
+    width: 15%;
+    background: linear-gradient(to left, $btn_color 10%, transparent 10%), url("../../img/assets/layer_11_363.png") no-repeat;
+    background-size: cover;
+  }
+  .footer-info {
+    padding: 1rem;
+    h3 {
+      text-transform: uppercase;
+      color:  $header_color;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+    .contact-center {
+      margin-top: 1.875rem;
+      margin-bottom: 5rem;
+      .contact-center-item {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        font-weight: bold;
+        list-style-type: none;
+        text-transform: uppercase;
+        i {
+          color:  $header_color;
+        }
+        a {
+          text-decoration:  none;
+          color: #777777;
+          &:hover {
+            color:  $btn_color;
+          }
+        }
+
+      }
+    }
+
+  }
+}
