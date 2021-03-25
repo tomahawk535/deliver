@@ -8,25 +8,29 @@ footer{
     width: 15%;
     background: linear-gradient(to right, $header_color 10%, transparent 10%), url("../../img/assets/layer_10_358.png") no-repeat;
     background-size: cover;
+    clip-path: polygon(0 0, 71% 0, 100% 100%, 0 100%);
 
   }
   .right-side-bg {
     width: 15%;
     background: linear-gradient(to left, $btn_color 10%, transparent 10%), url("../../img/assets/layer_11_363.png") no-repeat;
     background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 29% 100%);
   }
   .footer-info {
     padding: 1rem;
+
     h3 {
       text-transform: uppercase;
       color:  $header_color;
       font-size: 1.25rem;
       line-height: 1.5rem;
+
     }
-    .contact-center {
+    .footer-info-list {
       margin-top: 1.875rem;
       margin-bottom: 5rem;
-      .contact-center-item {
+      .footer-info-list-item {
         font-size: 0.875rem;
         line-height: 1.5rem;
         font-weight: bold;
@@ -42,9 +46,47 @@ footer{
             color:  $btn_color;
           }
         }
-
       }
     }
+  }
+}
+@media all and (max-width: 599px) {
+ footer {
+   flex-wrap: wrap;
+   .left-side-bg, .right-side-bg {
+     display: none;
+     }
+   .footer-info {
+     flex-basis: 100%;
+     padding: 0 4%;
+     .footer-info-list {
+       margin-bottom: 1rem;
 
+     }
+   }
+ }
+}
+@media (min-width: 600px) and (max-width: 850px) {
+  footer {
+    padding: 0 5%;
+    .left-side-bg, .right-side-bg {
+      display: none;
+    }
+  }
+}
+@media all and (min-width: 1900px) {
+  footer {
+    .left-side-bg, .right-side-bg {
+      flex-basis: 23%;
+    }
+    .left-side-bg {
+      clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+      background-position: bottom;
+    }
+    .right-side-bg {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 21% 100%);
+      background-position: bottom;
+
+    }
   }
 }
