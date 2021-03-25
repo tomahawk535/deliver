@@ -90,6 +90,56 @@ article {
       }
     }
   }
+  .sub-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding:  5.625rem  10%;
+    background-color: $header_color;
+    color:  $main_color;
+    h2{
+      font-size: 1.875rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.03rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      flex-basis: 60%;
+    }
+    p{
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.03rem;
+      flex-basis: 60%;
+      margin-top: 1.875rem;
+    }
+    input {
+      margin-left: auto;
+      color:  $main_color;
+      background-color:  $dk_btn_color;
+      margin-top: 1.875rem;
+      @include btn;
+      box-shadow: none;
+      padding: 0.8125rem 1.25rem;
+      height: 3.125rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .comp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3.75rem 10%;
+    .comp-item {
+      background-color: #f9f9f9;
+      border: 2px solid rgba(186,0,0,0.09);
+      padding: 2.5rem 0.75rem 1.875em;
+      img{
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media all and (max-width: 599px) {
@@ -116,12 +166,38 @@ article {
         }
       }
     }
+    .comp {
+      padding: 1.75rem 2%;
+      .comp-item {
+        flex-basis: 100%;
+      }
+    }
+    .sub-info {
+      padding:  5.625rem  2%;
+      h2{
+        flex-basis: 100%;
+        text-align: center;
+      }
+      p{
+        flex-basis: 100%;
+        text-align: justify;
+      }
+      input {
+        flex-basis: 35%;
+      }
+    }
   }
 }
 @media (min-width: 600px) and (max-width: 850px){
   article {
     .services {
       padding: 3.125rem 5% 2.6875rem;
+    }
+    .comp {
+      padding: 2.75rem 5%;
+    }
+    .sub-info {
+      padding:  5.625rem  5%;
     }
   }
 }
@@ -143,6 +219,17 @@ article {
         }
       }
     }
+    .comp {
+      .comp-item {
+        flex-basis: 49%;
+        margin-top: 1rem;
+      }
+    }
+    .sub-info {
+      h2 {
+        line-height: 1.875rem;
+      }
+    }
   }
 }
 
@@ -150,6 +237,12 @@ article {
   article {
     .services {
       padding: 6.25rem 20% 4.6875rem;
+    }
+    .comp {
+      padding: 3.75rem 20%;
+    }
+    .sub-info{
+      padding:  5.625rem  20%;
     }
   }
 }
